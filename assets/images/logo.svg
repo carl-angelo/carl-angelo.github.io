@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<rect width="64" height="8" fill="#fff"/>
+<rect y="56" width="64" height="8" fill="#fff"/>
+<rect x="-12" y="12" transform="matrix(6.123234e-17 -1 1 6.123234e-17 -12 20)" fill="#fff" width="32" height="8"/>
+<rect x="44" y="44" transform="matrix(6.123234e-17 -1 1 6.123234e-17 12 108)" fill="#fff" width="32" height="8"/>
+<circle cx="32" cy="32" r="5" fill="#fff"/>
+</svg>

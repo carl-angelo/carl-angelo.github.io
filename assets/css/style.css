@@ -1,5 +1,6 @@
 body nav.carl-nav {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     right: 0;
@@ -20,7 +21,7 @@ body nav.carl-nav .right-side .btn-topbar:hover {
 }
 
 body .banner {
-    background-image: url(../images/source-code-2.jpeg);
+    background-image: url(../images/gloomy2.jpg);
     height: 560px;
     width: 100%;
     background-repeat: no-repeat;
@@ -31,13 +32,32 @@ body .banner {
 body .banner div.cover {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body .banner div.cover div.cloud {
+    height: 500px;
+    width: 1000000px;
+    opacity: .3;
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+    -webkit-animation: animate-cloud 240s infinite linear;
+    -moz-animation: animate-cloud 240s infinite linear;
+    animation: animate-cloud 240s infinite linear;
+    background-image: url(../images/fog01.png);
+    background-position: center center;
 }
 
 body .banner div.cover div.jumbotron {
     background: transparent;
     text-align: center;
     color: #fff;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 5px;
     text-shadow: -2px 2px rgba(67, 66, 66, 0.7);
@@ -46,12 +66,14 @@ body .banner div.cover div.jumbotron {
 
 body .offset-div {
     width: 100%;
+    position: relative;
+    z-index: 10;
     margin-top: -150px;
 }
 
 body .offset-div .dp-container {
     width: 280px;
-    height: 300px;
+    height: 280px;
     margin: auto;
     border-radius: 300px;
     background-color: #fff;
@@ -62,18 +84,6 @@ body .offset-div .dp-container img {
     width: 100%;
     height: 100%;
     border-radius: 300px;
-}
-
-body #after-banner {
-    padding: 20px;
-    background-color: #eae6cc;
-}
-
-body #services {
-    min-height: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
 }
 
 body #about .container {
@@ -113,4 +123,34 @@ body #about .container .right-content {
 
 body #about .container .right-content img {
     width: 100%;
+}
+
+@-webkit-keyframes animate-cloud {
+    0% {
+        margin-left: -1200px;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animate-cloud {
+    0% {
+        margin-left: -1200px;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animate-cloud {
+    0% {
+        margin-left: -1200px;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
 }

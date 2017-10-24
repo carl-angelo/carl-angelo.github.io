@@ -1,8 +1,32 @@
 @import bourbon
 
 body 
+
+    nav.carl-nav
+        position: fixed
+        z-index: 100
+        top: 0
+        left: 0
+        right: 0
+        background:
+            color: rgba(0,0,0,0)
+        font:
+            family: 'Orbitron', sans-serif
+
+        .right-side
+            .btn-topbar
+                background-color: transparent
+                border: 1px solid #fff
+                color: #fff
+
+                &:hover
+                    background-color: #fff
+                    color: #000000
+                    border: 1px solid #000000
+
     .banner
-        background-image: url(../images/placeholder-banner.png)
+        // background-image: url(../images/source-code-2.jpeg)
+        background-image: url(../images/gloomy2.jpg)
         height: 560px
         width: 100%
         background:
@@ -10,27 +34,63 @@ body
             size: cover
             position: center
 
-        div.jumbotron
-            background: transparent
-            padding:
-                top: 210px
-            // +transition(all 0.3s linear)
-            // +display(flex)
+        div.cover
+            width: 100%
+            height: 100%
+            position: relative
+            background:
+                color: rgba(0, 0, 0, 0.5)     
 
-    #after-banner
-        padding: 20px
-        background:
-            color: #eae6cc
+            div.cloud
+                height: 500px
+                width: 1000000px
+                opacity: .3
+                position: absolute
+                top: 60px
+                z-index: 1
+                @include animation(animate-cloud 240s infinite linear) 
+                background: 
+                    image: url(../images/fog01.png)
+                    position: center center
+                    // size: 500px 200px
+                    // repeat-y: no-repeat
 
-    
-    #services
-        min-height: 50px
-        padding:
-            top: 50px
-            bottom: 50px
-        text-align: center
-        background:
-            // color: gray
+            div.jumbotron
+                background: transparent
+                text-align: center
+                color: #fff
+                position: absolute
+                top: 0
+                width: 100%
+                z-index: 10
+                font-family: 'Orbitron', sans-serif
+                letter-spacing: 5px
+                text-shadow: -2px 2px rgba(67, 66, 66, 0.7)
+                padding-top: 210px
+                // +transition(all 0.3s linear)
+                // +display(flex)
+
+    .offset-div
+        width: 100%
+        position: relative
+        z-index: 10
+        margin:
+            top: -150px
+
+        .dp-container
+            width: 280px
+            height: 280px
+            margin: auto
+            border:
+                radius: 300px
+            background: 
+                color: #fff
+            padding: 10px
+
+            img
+                width: 100%
+                height: 100%
+                border-radius: 300px
     
     #about 
         .container
@@ -54,3 +114,9 @@ body
                 
                 img
                     width: 100%
+
+@include keyframes(animate-cloud)
+  0%
+    margin-left: -1200px
+  100%
+    margin-left: 100%

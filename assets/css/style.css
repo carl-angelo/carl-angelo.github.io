@@ -38,16 +38,16 @@ body .banner div.cover {
 
 body .banner div.cover div.cloud {
     height: 500px;
-    width: 1000000px;
+    width: 10000px;
     opacity: .3;
     position: absolute;
+    display: inline-block;
     top: 60px;
     z-index: 1;
-    -webkit-animation: animate-cloud 240s infinite linear;
-    -moz-animation: animate-cloud 240s infinite linear;
-    animation: animate-cloud 240s infinite linear;
+    -webkit-animation: animate-cloud 60s infinite linear;
+    -moz-animation: animate-cloud 60s infinite linear;
+    animation: animate-cloud 60s infinite linear;
     background-image: url(../images/fog01.png);
-    background-position: center center;
 }
 
 body .banner div.cover div.jumbotron {
@@ -127,30 +127,30 @@ body #about .container .right-content img {
 
 @-webkit-keyframes animate-cloud {
     0% {
-        margin-left: -1200px;
+        background-position: 0 0;
     }
 
     100% {
-        margin-left: 100%;
+        background-position: 1000px center;
     }
 }
 
 @-moz-keyframes animate-cloud {
     0% {
-        margin-left: -1200px;
+        background-position: 0 0;
     }
 
     100% {
-        margin-left: 100%;
+        background-position: 1000px center;
     }
 }
 
 @keyframes animate-cloud {
     0% {
-        margin-left: -1200px;
+        background-position: 0 0;
     }
 
     100% {
-        margin-left: 100%;
+        background-position: 1000px center;
     }
 }

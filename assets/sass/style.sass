@@ -43,15 +43,16 @@ body
 
             div.cloud
                 height: 500px
-                width: 1000000px
+                width: 10000px
                 opacity: .3
                 position: absolute
+                display: inline-block
                 top: 60px
                 z-index: 1
-                @include animation(animate-cloud 240s infinite linear) 
+                @include animation(animate-cloud 60s infinite linear) 
                 background: 
                     image: url(../images/fog01.png)
-                    position: center center
+                    // position: center center
                     // size: 500px 200px
                     // repeat-y: no-repeat
 
@@ -117,6 +118,6 @@ body
 
 @include keyframes(animate-cloud)
   0%
-    margin-left: -1200px
+    background-position: 0 0
   100%
-    margin-left: 100%
+    background-position: 1000px center

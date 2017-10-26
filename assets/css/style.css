@@ -1,4 +1,16 @@
-body nav.carl-nav {
+html, body {
+    width: 100%;
+}
+
+html *, body * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html nav.carl-nav, body nav.carl-nav {
     position: fixed;
     z-index: 100;
     top: 0;
@@ -8,19 +20,19 @@ body nav.carl-nav {
     font-family: 'Orbitron', sans-serif;
 }
 
-body nav.carl-nav .right-side .btn-topbar {
+html nav.carl-nav .right-side .btn-topbar, body nav.carl-nav .right-side .btn-topbar {
     background-color: transparent;
     border: 1px solid #fff;
     color: #fff;
 }
 
-body nav.carl-nav .right-side .btn-topbar:hover {
+html nav.carl-nav .right-side .btn-topbar:hover, body nav.carl-nav .right-side .btn-topbar:hover {
     background-color: #fff;
     color: #000000;
     border: 1px solid #000000;
 }
 
-body .banner {
+html .banner, body .banner {
     background-image: url(../images/gloomy2.jpg);
     height: 560px;
     width: 100%;
@@ -29,14 +41,14 @@ body .banner {
     background-position: center;
 }
 
-body .banner div.cover {
+html .banner div.cover, body .banner div.cover {
     width: 100%;
     height: 100%;
     position: relative;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-body .banner div.cover div.cloud {
+html .banner div.cover div.cloud, body .banner div.cover div.cloud {
     height: 500px;
     width: 10000px;
     opacity: .3;
@@ -50,7 +62,7 @@ body .banner div.cover div.cloud {
     background-image: url(../images/fog01.png);
 }
 
-body .banner div.cover div.jumbotron {
+html .banner div.cover div.jumbotron, body .banner div.cover div.jumbotron {
     background: transparent;
     text-align: center;
     color: #fff;
@@ -64,14 +76,14 @@ body .banner div.cover div.jumbotron {
     padding-top: 210px;
 }
 
-body .offset-div {
+html .offset-div, body .offset-div {
     width: 100%;
     position: relative;
     z-index: 10;
     margin-top: -150px;
 }
 
-body .offset-div .dp-container {
+html .offset-div .dp-container, body .offset-div .dp-container {
     width: 280px;
     height: 280px;
     margin: auto;
@@ -80,16 +92,17 @@ body .offset-div .dp-container {
     padding: 10px;
 }
 
-body .offset-div .dp-container img {
+html .offset-div .dp-container img, body .offset-div .dp-container img {
     width: 100%;
     height: 100%;
     border-radius: 300px;
 }
 
-body #about .container {
-    width: 100%;
-    height: 300px;
-    margin-top: 50px;
+html #about .me-container, body #about .me-container {
+    max-width: 1140px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -108,21 +121,27 @@ body #about .container {
     -ms-flex-pack: center;
 }
 
-body #about .container .left-content {
-    width: 70%;
-    height: 100%;
-    padding: 20px;
-    text-align: justify;
+html #about .me-container .me-tabs, body #about .me-container .me-tabs {
+    margin: 0 auto;
+    padding: 20px 30px;
+    border: 1px solid red;
+    border-radius: 5px;
+    height: 300px;
 }
 
-body #about .container .right-content {
-    width: 30%;
-    height: 20%;
+html #skills .container, body #skills .container {
+    max-width: 1140px;
+    margin: 10px auto;
     padding: 10px;
+    display: block;
 }
 
-body #about .container .right-content img {
-    width: 100%;
+html #skills .container .my-skills, body #skills .container .my-skills {
+    width: 20%;
+    height: 200px;
+    border: 1px solid blue;
+    display: inline-block;
+    margin: 0;
 }
 
 @-webkit-keyframes animate-cloud {

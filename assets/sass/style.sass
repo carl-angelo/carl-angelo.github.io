@@ -33,8 +33,9 @@ html,body
     .banner
         // background-image: url(../images/source-code-2.jpeg)
         background-image: url(../images/gloomy2.jpg)
-        height: 560px
+        height: 650px
         width: 100%
+        overflow: hidden
         background:
             repeat: no-repeat
             size: cover
@@ -53,7 +54,7 @@ html,body
                 opacity: .3
                 position: absolute
                 display: inline-block
-                top: 60px
+                top: 150px
                 z-index: 1
                 @include animation(animate-cloud 60s infinite linear) 
                 background: 
@@ -98,29 +99,6 @@ html,body
                 width: 100%
                 height: 100%
                 border-radius: 300px
-    
-    // #about 
-    //     .container
-    //         width: 100%
-    //         height: 300px
-    //         margin:
-    //             top: 50px
-    //         +display(flex)
-    //         +justify-content(center)
-
-    //         .left-content
-    //             width: 70%
-    //             height: 100%
-    //             padding: 20px
-    //             text-align: justify
-
-    //         .right-content
-    //             width: 30%
-    //             height: 20%
-    //             padding: 10px
-                
-    //             img
-    //                 width: 100%
 
     #about
         .me-container
@@ -128,17 +106,52 @@ html,body
             margin: 10px auto
             padding: 10px
             text-align: center
-            +display(flex)
-            +justify-content(center)
+            // +display(flex)
+            // +justify-content(center)
             
             .me-tabs
                 margin: 0 auto
                 padding: 20px 30px
-                border: 1px solid red
-                    radius: 5px
-                height: 300px
+                // border: 1px solid red
+                //     radius: 5px
+                // height: 300px
+                display: block
+
+                h1
+                    margin-bottom: 30px
+
+                p
+                    text-align: justify
+                    line-height: 30px
+
+                .experience-content
+                    display: table
+                    text-align: left
+                    margin: 20px 0
+
+                    div
+                        display: table-cell
+                        vertical-align: text-top
+                        height: 100%
+
+                        &.title
+                            width: 30%
+                            vertical-align: middle
+
+                            h3
+                                font-size: 1.5em
+
+                            h4
+                                color: #696767
+                                font-size: 1.2em
+
+                            .year-span
+                                color: #7b7b7b
+                                font-size: 1em
 
     #skills
+        text-align: center
+
         .container
             max-width: 1140px
             margin: 10px auto
@@ -151,7 +164,7 @@ html,body
                 height: 200px
                 border: 1px solid blue
                 display: inline-block
-                margin: 0¸
+                margin: 2.5px 0
 
 
 

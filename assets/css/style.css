@@ -34,8 +34,9 @@ html nav.carl-nav .right-side .btn-topbar:hover, body nav.carl-nav .right-side .
 
 html .banner, body .banner {
     background-image: url(../images/gloomy2.jpg);
-    height: 560px;
+    height: 650px;
     width: 100%;
+    overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -54,7 +55,7 @@ html .banner div.cover div.cloud, body .banner div.cover div.cloud {
     opacity: .3;
     position: absolute;
     display: inline-block;
-    top: 60px;
+    top: 150px;
     z-index: 1;
     -webkit-animation: animate-cloud 60s infinite linear;
     -moz-animation: animate-cloud 60s infinite linear;
@@ -103,30 +104,56 @@ html #about .me-container, body #about .me-container {
     margin: 10px auto;
     padding: 10px;
     text-align: center;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    box-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
 }
 
 html #about .me-container .me-tabs, body #about .me-container .me-tabs {
     margin: 0 auto;
     padding: 20px 30px;
-    border: 1px solid red;
-    border-radius: 5px;
-    height: 300px;
+    display: block;
+}
+
+html #about .me-container .me-tabs h1, body #about .me-container .me-tabs h1 {
+    margin-bottom: 30px;
+}
+
+html #about .me-container .me-tabs p, body #about .me-container .me-tabs p {
+    text-align: justify;
+    line-height: 30px;
+}
+
+html #about .me-container .me-tabs .experience-content, body #about .me-container .me-tabs .experience-content {
+    display: table;
+    text-align: left;
+    margin: 20px 0;
+}
+
+html #about .me-container .me-tabs .experience-content div, body #about .me-container .me-tabs .experience-content div {
+    display: table-cell;
+    vertical-align: text-top;
+    height: 100%;
+}
+
+html #about .me-container .me-tabs .experience-content div.title, body #about .me-container .me-tabs .experience-content div.title {
+    width: 30%;
+    vertical-align: middle;
+}
+
+html #about .me-container .me-tabs .experience-content div.title h3, body #about .me-container .me-tabs .experience-content div.title h3 {
+    font-size: 1.5em;
+}
+
+html #about .me-container .me-tabs .experience-content div.title h4, body #about .me-container .me-tabs .experience-content div.title h4 {
+    color: #696767;
+    font-size: 1.2em;
+}
+
+html #about .me-container .me-tabs .experience-content div.title .year-span, body #about .me-container .me-tabs .experience-content div.title .year-span {
+    color: #7b7b7b;
+    font-size: 1em;
+}
+
+html #skills, body #skills {
+    text-align: center;
 }
 
 html #skills .container, body #skills .container {
@@ -141,7 +168,7 @@ html #skills .container .my-skills, body #skills .container .my-skills {
     height: 200px;
     border: 1px solid blue;
     display: inline-block;
-    margin: 0;
+    margin: 2.5px 0;
 }
 
 @-webkit-keyframes animate-cloud {

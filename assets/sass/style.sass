@@ -1,5 +1,21 @@
 @import bourbon
 
+$white: #ffffff
+
+$black: #000000
+
+$navy_blue: #1C2432
+
+$mid_gray: #696767
+
+$light_gray: #7b7b7b
+
+$secondary: #B1CACC
+
+$orange: #E27338
+
+$light_blue: #4094B6
+
 html,body
     width: 100%
 
@@ -7,6 +23,11 @@ html,body
         margin: 0
         padding: 0
         +box-sizing(border-box)
+        font-weight: 100
+
+    h1
+        font-size: 60px
+        letter-spacing: 3px
 
     nav.carl-nav
         position: fixed
@@ -14,21 +35,24 @@ html,body
         top: 0
         left: 0
         right: 0
-        background:
-            color: rgba(0,0,0,0)
+        background-color: rgba(28, 36, 50, 0.5)  
         font:
             family: 'Orbitron', sans-serif
+
+        &.dark
+            background-color: rgba(28, 36, 50, 1)  
+            +transition(0.5s all linear)
 
         .right-side
             .btn-topbar
                 background-color: transparent
-                border: 1px solid #fff
-                color: #fff
+                border: 1px solid $white
+                color: $white
 
                 &:hover
-                    background-color: #fff
-                    color: #000000
-                    border: 1px solid #000000
+                    background-color: $white
+                    color: $black
+                    border: 1px solid $black
 
     .banner
         // background-image: url(../images/source-code-2.jpeg)
@@ -46,7 +70,7 @@ html,body
             height: 100%
             position: relative
             background:
-                color: rgba(0, 0, 0, 0.5)     
+                color: rgba(0, 0, 0, 0)     
 
             div.cloud
                 height: 500px
@@ -66,7 +90,7 @@ html,body
             div.jumbotron
                 background: transparent
                 text-align: center
-                color: #fff
+                color: $white
                 position: absolute
                 top: 0
                 width: 100%
@@ -92,7 +116,7 @@ html,body
             border:
                 radius: 300px
             background: 
-                color: #fff
+                color: $white
             padding: 10px
 
             img
@@ -142,15 +166,49 @@ html,body
                                 font-size: 1.5em
 
                             h4
-                                color: #696767
+                                color: $mid_gray
                                 font-size: 1.2em
 
                             .year-span
-                                color: #7b7b7b
+                                color: $light_gray
                                 font-size: 1em
+
+    #services
+        text-align: center
+        background-color: $secondary
+        color: $white
+        padding: 50px 0 100px
+
+        .container
+            max-width: 1140px 
+            margin: 10px auto
+            display: table
+
+            div
+                display: table-cell
+
+                &.right-side
+                    width: 300px
+                    text-align: left
+                    vertical-align: middle
+
+                    ul
+                        li
+                            font-size: 2em
+                            line-height: 60px
+                            list-style: none
+                            padding: 10px 0
+
+                            &:before
+                                font-family: FontAwesome
+                                content: "\f00c"
+                                margin-right: 10px
+
 
     #skills
         text-align: center
+        background-color: $white
+        padding-top: 50px
 
         .container
             max-width: 1140px
@@ -161,12 +219,27 @@ html,body
 
             .my-skills
                 width: 20%
-                height: 200px
-                border: 1px solid blue
+                height: 230px
+                // background-color: $white
+                // border: 1px solid $navy_blue
+                //     radius: 5px
                 display: inline-block
                 margin: 2.5px 0
+                +box-sizing(border-box)
+                padding: 20px 5px
 
+                img
+                    height: 80%
+                
+                div
+                    position: block
 
+                .rate
+                    .fa-star
+                        color: $navy_blue
+
+                        &.checked
+                            color: $orange
 
 
 @include keyframes(animate-cloud)

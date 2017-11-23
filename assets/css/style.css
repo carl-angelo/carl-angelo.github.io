@@ -8,6 +8,12 @@ html *, body * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-weight: 100;
+}
+
+html h1, body h1 {
+    font-size: 60px;
+    letter-spacing: 3px;
 }
 
 html nav.carl-nav, body nav.carl-nav {
@@ -16,18 +22,25 @@ html nav.carl-nav, body nav.carl-nav {
     top: 0;
     left: 0;
     right: 0;
-    background-color: transparent;
+    background-color: rgba(28, 36, 50, 0.5);
     font-family: 'Orbitron', sans-serif;
+}
+
+html nav.carl-nav.dark, body nav.carl-nav.dark {
+    background-color: #1c2432;
+    -webkit-transition: 0.5s all linear;
+    -moz-transition: 0.5s all linear;
+    transition: 0.5s all linear;
 }
 
 html nav.carl-nav .right-side .btn-topbar, body nav.carl-nav .right-side .btn-topbar {
     background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid #ffffff;
+    color: #ffffff;
 }
 
 html nav.carl-nav .right-side .btn-topbar:hover, body nav.carl-nav .right-side .btn-topbar:hover {
-    background-color: #fff;
+    background-color: #ffffff;
     color: #000000;
     border: 1px solid #000000;
 }
@@ -46,7 +59,7 @@ html .banner div.cover, body .banner div.cover {
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
 }
 
 html .banner div.cover div.cloud, body .banner div.cover div.cloud {
@@ -66,7 +79,7 @@ html .banner div.cover div.cloud, body .banner div.cover div.cloud {
 html .banner div.cover div.jumbotron, body .banner div.cover div.jumbotron {
     background: transparent;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     position: absolute;
     top: 0;
     width: 100%;
@@ -89,7 +102,7 @@ html .offset-div .dp-container, body .offset-div .dp-container {
     height: 280px;
     margin: auto;
     border-radius: 300px;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 10px;
 }
 
@@ -152,8 +165,46 @@ html #about .me-container .me-tabs .experience-content div.title .year-span, bod
     font-size: 1em;
 }
 
+html #services, body #services {
+    text-align: center;
+    background-color: #B1CACC;
+    color: #ffffff;
+    padding: 50px 0 100px;
+}
+
+html #services .container, body #services .container {
+    max-width: 1140px;
+    margin: 10px auto;
+    display: table;
+}
+
+html #services .container div, body #services .container div {
+    display: table-cell;
+}
+
+html #services .container div.right-side, body #services .container div.right-side {
+    width: 300px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+html #services .container div.right-side ul li, body #services .container div.right-side ul li {
+    font-size: 2em;
+    line-height: 60px;
+    list-style: none;
+    padding: 10px 0;
+}
+
+html #services .container div.right-side ul li:before, body #services .container div.right-side ul li:before {
+    font-family: FontAwesome;
+    content: "\f00c";
+    margin-right: 10px;
+}
+
 html #skills, body #skills {
     text-align: center;
+    background-color: #ffffff;
+    padding-top: 50px;
 }
 
 html #skills .container, body #skills .container {
@@ -165,10 +216,29 @@ html #skills .container, body #skills .container {
 
 html #skills .container .my-skills, body #skills .container .my-skills {
     width: 20%;
-    height: 200px;
-    border: 1px solid blue;
+    height: 230px;
     display: inline-block;
     margin: 2.5px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px 5px;
+}
+
+html #skills .container .my-skills img, body #skills .container .my-skills img {
+    height: 80%;
+}
+
+html #skills .container .my-skills div, body #skills .container .my-skills div {
+    position: block;
+}
+
+html #skills .container .my-skills .rate .fa-star, body #skills .container .my-skills .rate .fa-star {
+    color: #1C2432;
+}
+
+html #skills .container .my-skills .rate .fa-star.checked, body #skills .container .my-skills .rate .fa-star.checked {
+    color: #E27338;
 }
 
 @-webkit-keyframes animate-cloud {

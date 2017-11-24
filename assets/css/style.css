@@ -45,6 +45,21 @@ html nav.carl-nav .right-side .btn-topbar:hover, body nav.carl-nav .right-side .
     border: 1px solid #000000;
 }
 
+html .container, body .container {
+    max-width: 1140px;
+    margin: 10px auto;
+}
+
+html .row, body .row {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+html .row .col, html .row .col-3, html .row .col-6, html .row .col-9, html .row .col-12, body .row .col, body .row .col-3, body .row .col-6, body .row .col-9, body .row .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 html .banner, body .banner {
     background-image: url(../images/gloomy2.jpg);
     height: 650px;
@@ -112,57 +127,60 @@ html .offset-div .dp-container img, body .offset-div .dp-container img {
     border-radius: 300px;
 }
 
-html #about .me-container, body #about .me-container {
-    max-width: 1140px;
-    margin: 10px auto;
+html #about .me, body #about .me {
     padding: 10px;
     text-align: center;
 }
 
-html #about .me-container .me-tabs, body #about .me-container .me-tabs {
+html #about .me .me-tabs, body #about .me .me-tabs {
     margin: 0 auto;
     padding: 20px 30px;
     display: block;
 }
 
-html #about .me-container .me-tabs h1, body #about .me-container .me-tabs h1 {
+html #about .me .me-tabs h1, body #about .me .me-tabs h1 {
     margin-bottom: 30px;
 }
 
-html #about .me-container .me-tabs p, body #about .me-container .me-tabs p {
+html #about .me .me-tabs p, body #about .me .me-tabs p {
     text-align: justify;
     line-height: 30px;
 }
 
-html #about .me-container .me-tabs .experience-content, body #about .me-container .me-tabs .experience-content {
+html #about .me .me-tabs .experience-content, body #about .me .me-tabs .experience-content {
     display: table;
     text-align: left;
     margin: 20px 0;
 }
 
-html #about .me-container .me-tabs .experience-content div, body #about .me-container .me-tabs .experience-content div {
+html #about .me .me-tabs .experience-content div, body #about .me .me-tabs .experience-content div {
     display: table-cell;
     vertical-align: text-top;
     height: 100%;
 }
 
-html #about .me-container .me-tabs .experience-content div.title, body #about .me-container .me-tabs .experience-content div.title {
+html #about .me .me-tabs .experience-content div.title, body #about .me .me-tabs .experience-content div.title {
     width: 30%;
     vertical-align: middle;
 }
 
-html #about .me-container .me-tabs .experience-content div.title h3, body #about .me-container .me-tabs .experience-content div.title h3 {
+html #about .me .me-tabs .experience-content div.title h3, body #about .me .me-tabs .experience-content div.title h3 {
     font-size: 1.5em;
 }
 
-html #about .me-container .me-tabs .experience-content div.title h4, body #about .me-container .me-tabs .experience-content div.title h4 {
+html #about .me .me-tabs .experience-content div.title h4, body #about .me .me-tabs .experience-content div.title h4 {
     color: #696767;
     font-size: 1.2em;
 }
 
-html #about .me-container .me-tabs .experience-content div.title .year-span, body #about .me-container .me-tabs .experience-content div.title .year-span {
+html #about .me .me-tabs .experience-content div.title .year-span, body #about .me .me-tabs .experience-content div.title .year-span {
     color: #7b7b7b;
     font-size: 1em;
+}
+
+html #about .me .me-tabs .experience-content div.description, body #about .me .me-tabs .experience-content div.description {
+    border-left: 1px solid #443E4C;
+    padding: 10px 0 10px 10px;
 }
 
 html #services, body #services {
@@ -172,20 +190,12 @@ html #services, body #services {
     padding: 50px 0 100px;
 }
 
-html #services .container, body #services .container {
-    max-width: 1140px;
-    margin: 10px auto;
-    display: table;
-}
-
-html #services .container div, body #services .container div {
-    display: table-cell;
+html #services .container div.left-side img, body #services .container div.left-side img {
+    width: 95%;
 }
 
 html #services .container div.right-side, body #services .container div.right-side {
-    width: 300px;
     text-align: left;
-    vertical-align: middle;
 }
 
 html #services .container div.right-side ul li, body #services .container div.right-side ul li {
@@ -208,21 +218,18 @@ html #skills, body #skills {
 }
 
 html #skills .container, body #skills .container {
-    max-width: 1140px;
-    margin: 10px auto;
     padding: 10px;
     display: block;
 }
 
 html #skills .container .my-skills, body #skills .container .my-skills {
-    width: 20%;
     height: 230px;
     display: inline-block;
-    margin: 2.5px 0;
+    margin: 5px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 20px 5px;
+    padding: 20px 0;
 }
 
 html #skills .container .my-skills img, body #skills .container .my-skills img {
@@ -239,6 +246,25 @@ html #skills .container .my-skills .rate .fa-star, body #skills .container .my-s
 
 html #skills .container .my-skills .rate .fa-star.checked, body #skills .container .my-skills .rate .fa-star.checked {
     color: #E27338;
+}
+
+html footer, body footer {
+    width: 100%;
+    min-height: 100px;
+    background-color: #443E4C;
+}
+
+/* 575px 767px 991px 1199px */
+@media only screen and (max-width: 991px) {
+    .container {
+        max-width: 1140px;
+        margin: 10px auto;
+    }
+
+    #about .container {
+        max-width: 95% !important;
+        margin: 10px auto;
+    }
 }
 
 @-webkit-keyframes animate-cloud {

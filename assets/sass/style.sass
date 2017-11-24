@@ -16,6 +16,8 @@ $orange: #E27338
 
 $light_blue: #4094B6
 
+$third_color: #443E4C
+
 html,body
     width: 100%
 
@@ -53,6 +55,21 @@ html,body
                     background-color: $white
                     color: $black
                     border: 1px solid $black
+
+    .container
+        max-width: 1140px
+        margin: 10px auto
+
+    .row
+        padding:
+            left: 0 !important
+            right: 0 !important
+
+        .col, .col-3, .col-6, .col-9, .col-12
+            padding:
+                left: 0
+                right: 0
+
 
     .banner
         // background-image: url(../images/source-code-2.jpeg)
@@ -125,9 +142,7 @@ html,body
                 border-radius: 300px
 
     #about
-        .me-container
-            max-width: 1140px
-            margin: 10px auto
+        .me
             padding: 10px
             text-align: center
             // +display(flex)
@@ -173,6 +188,11 @@ html,body
                                 color: $light_gray
                                 font-size: 1em
 
+                        &.description
+                            border-left: 1px solid $third_color 
+                            padding: 10px 0 10px 10px
+
+
     #services
         text-align: center
         background-color: $secondary
@@ -180,29 +200,26 @@ html,body
         padding: 50px 0 100px
 
         .container
-            max-width: 1140px 
-            margin: 10px auto
-            display: table
 
-            div
-                display: table-cell
+            div.left-side
+                img
+                    width: 95%
 
-                &.right-side
-                    width: 300px
-                    text-align: left
-                    vertical-align: middle
+            div.right-side
+                // width: 300px
+                text-align: left
 
-                    ul
-                        li
-                            font-size: 2em
-                            line-height: 60px
-                            list-style: none
-                            padding: 10px 0
+                ul
+                    li
+                        font-size: 2em
+                        line-height: 60px
+                        list-style: none
+                        padding: 10px 0
 
-                            &:before
-                                font-family: FontAwesome
-                                content: "\f00c"
-                                margin-right: 10px
+                        &:before
+                            font-family: FontAwesome
+                            content: "\f00c"
+                            margin-right: 10px
 
 
     #skills
@@ -211,22 +228,20 @@ html,body
         padding-top: 50px
 
         .container
-            max-width: 1140px
-            margin: 10px auto
             padding: 10px
             display: block
             // +display(flex)
 
-            .my-skills
-                width: 20%
+            .my-skills 
+                // width: 20%
                 height: 230px
                 // background-color: $white
                 // border: 1px solid $navy_blue
                 //     radius: 5px
                 display: inline-block
-                margin: 2.5px 0
+                margin: 5px
                 +box-sizing(border-box)
-                padding: 20px 5px
+                padding: 20px 0
 
                 img
                     height: 80%
@@ -241,9 +256,27 @@ html,body
                         &.checked
                             color: $orange
 
+    footer
+        width: 100%
+        min-height: 100px
+        background-color: $third_color
+
+
+/* 575px 767px 991px 1199px */
+
+@media only screen and (max-width: 991px)
+    .container
+        max-width: 1140px
+        margin: 10px auto
+
+    #about
+        .container
+            max-width: 95% !important 
+            margin: 10px auto
+
 
 @include keyframes(animate-cloud)
   0%
     background-position: 0 0
   100%
-    background-position: 1000px center
+    background-position: 1000px center 

@@ -20,5 +20,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-sassbeautify": "^0.1.0",
     "node-bourbon": "^4.2.8"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
   }
 }

@@ -74,7 +74,7 @@ html .banner div.cover, body .banner div.cover {
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 html .banner div.cover div.cloud, body .banner div.cover div.cloud {
@@ -251,7 +251,20 @@ html #skills .container .my-skills .rate .fa-star.checked, body #skills .contain
 html footer, body footer {
     width: 100%;
     min-height: 100px;
-    background-color: #443E4C;
+    background-color: #1c2432;
+}
+
+html footer #contact-me, body footer #contact-me {
+    color: #ffffff;
+    padding: 10px;
+}
+
+html footer #contact-me p, body footer #contact-me p {
+    padding-left: 20px;
+}
+
+html footer #contact-me a, body footer #contact-me a {
+    color: #ffffff;
 }
 
 /* 575px 767px 991px 1199px */
